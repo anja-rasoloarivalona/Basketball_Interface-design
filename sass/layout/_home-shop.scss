@@ -1,0 +1,11 @@
+.home-shop {
+    
+    display: grid;
+    grid-template-rows: 6rem repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+
+    &__header {
+        align-self: center;
+    }
+}

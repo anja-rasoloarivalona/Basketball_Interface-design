@@ -1,0 +1,34 @@
+.container {  
+    display: grid;
+    grid-template-rows: 4.1rem calc(100vh - 4.1rem);
+    grid-template-columns: 
+    [right-side-start] 20rem [right-side-end 
+
+        full-start] minmax(6rem,1fr) 
+
+        [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
+        
+        minmax(6rem,1fr) [full-end
+
+    left-side-start] 20rem [left-side-end];
+
+    background-image: url("../img/bg--kobe.png");
+    background-repeat: no-repeat;
+    background-position-x: 8rem;
+    background-size: 40%;
+   
+}
+
+
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: full-start / -1;
+}
+
+.home-shop {
+    grid-column: left-side-start / left-start-end;
+    grid-row: 2 / 3;
+    background-color: grey;
+}
+

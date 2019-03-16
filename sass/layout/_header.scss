@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba($color-nav, .20);
+
+
+    &__profile {
+        display: flex;
+    }
+
+    &__user-img {
+        width: 2.7rem;
+        height: 2.7rem;
+        object-fit: cover;
+        border-radius: 50%;
+        align-self: center;
+    }
+
+    &__list {
+        width: 20rem;
+        display: flex;
+        align-items: center;
+
+        list-style: none;
+        
+    }
+
+    &__items {
+        color: $color-kobe-primary;
+        width: 4rem;
+        margin: .6rem 1.6rem;
+        
+    }
+
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        margin: .5rem 1.4rem;
+        fill: $color-kobe-primary;
+        transform: translateY(2px);
+      
+    }
+}

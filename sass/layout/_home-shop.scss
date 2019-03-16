@@ -1,9 +1,12 @@
 .home-shop {
     
     display: grid;
-    grid-template-rows: 6rem repeat(3, 1fr);
+    grid-template-rows: 6rem repeat( auto-fit, 20rem );
+   // grid-auto-rows:  repeat( auto-fit, minmax(230px, 1fr) );
     grid-gap: 1rem;
     justify-content: center;
+
+    
 
     &__header {
         align-self: center;

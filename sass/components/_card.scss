@@ -1,0 +1,86 @@
+.card {
+
+    height: 20rem;
+    width: 15rem;
+    border-radius: 2%;
+    box-shadow: 0 .3rem .3rem rgba(black, .2);
+
+    display: grid;
+    grid-template-rows: 11rem 9rem;
+    
+
+
+
+    &__logo {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 3rem;
+        height: 1.5rem;
+
+        transform: translateY(.5rem) translateX(.5rem);
+        
+    } 
+
+    &__img {
+       grid-row: 2 / 3;
+       grid-column: 1/-1;
+       justify-self: center;
+       width: 13rem;
+       transform: translateY(-2rem)
+     
+
+    }
+
+    &__header {
+         
+        display: grid;
+        grid-template-rows: 2rem 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+
+
+
+    &--lakers-shoe {
+        
+       &__header {
+           background-image: linear-gradient(to left bottom,
+                rgba($color-kobe-secondary, .10),
+                rgba($color-kobe-primary, .90),
+           );
+       }
+
+       &__body {
+           background-color: grey;
+       }
+    }
+
+    &--lakers-cap {
+
+        &__header {
+            background-image: linear-gradient(to left bottom,
+                 rgba($color-kobe-secondary, .10),
+                 rgba($color-kobe-primary, .90),
+            );
+        }
+ 
+        &__body {
+            background-color: grey;
+        }
+    }
+
+    
+    &--lakers-shirt {
+        &__header {
+            background-image: linear-gradient(to left bottom,
+                 rgba($color-kobe-secondary, .10),
+                 rgba($color-kobe-primary, .90),
+            );
+        }
+ 
+        &__body {
+            background-color: grey;
+        }
+    }
+}

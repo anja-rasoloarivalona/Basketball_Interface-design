@@ -1,6 +1,6 @@
 .container {  
     display: grid;
-    grid-template-rows: 4.1rem calc(100vh - 4.1rem);
+    grid-template-rows: 4.1rem calc(100vh - 4.1rem) min-content;
     grid-template-columns: 
     [right-side-start] 20rem [right-side-end 
 
@@ -28,7 +28,10 @@
 
 .home-shop {
     grid-column: left-side-start / left-start-end;
-    grid-row: 2 / 3;
-    background-color: grey;
+    grid-row: 2 / -1;
 }
 
+.home-news {
+    grid-row: 3 / 4;
+    grid-column: center-start / center-end;
+}

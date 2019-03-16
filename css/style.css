@@ -20,6 +20,42 @@ body {
   color: #1d2129;
   line-height: 1.93rem; }
 
+.card {
+  height: 20rem;
+  width: 15rem;
+  border-radius: 2%;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: 11rem 9rem; }
+  .card__logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 3rem;
+    height: 1.5rem;
+    transform: translateY(0.5rem) translateX(0.5rem); }
+  .card__img {
+    grid-row: 2 / 3;
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 13rem;
+    transform: translateY(-2rem); }
+  .card__header {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    grid-template-columns: repeat(2, 1fr); }
+  .card--lakers-shoe__header {
+    background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
+  .card--lakers-shoe__body {
+    background-color: grey; }
+  .card--lakers-cap__header {
+    background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
+  .card--lakers-cap__body {
+    background-color: grey; }
+  .card--lakers-shirt__header {
+    background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
+  .card--lakers-shirt__body {
+    background-color: grey; }
+
 .header {
   display: flex;
   align-items: center;
@@ -51,7 +87,7 @@ body {
 
 .home-shop {
   display: grid;
-  grid-template-rows: 6rem repeat(3, 1fr);
+  grid-template-rows: 6rem repeat(auto-fit, 20rem);
   grid-gap: 1rem;
   justify-content: center; }
   .home-shop__header {
@@ -108,7 +144,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 4.1rem calc(100vh - 4.1rem);
+  grid-template-rows: 4.1rem calc(100vh - 4.1rem) min-content;
   grid-template-columns: [right-side-start] 20rem [right-side-end full-start] minmax(6rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end left-side-start] 20rem [left-side-end];
   background-image: url("../img/bg--kobe.png");
   background-repeat: no-repeat;
@@ -121,5 +157,8 @@ body {
 
 .home-shop {
   grid-column: left-side-start / left-start-end;
-  grid-row: 2 / 3;
-  background-color: grey; }
+  grid-row: 2 / -1; }
+
+.home-news {
+  grid-row: 3 / 4;
+  grid-column: center-start / center-end; }

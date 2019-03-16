@@ -24,9 +24,15 @@ body {
   height: 20rem;
   width: 15rem;
   border-radius: 2%;
-  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.3rem rgba(8, 8, 8, 0.2);
   display: grid;
   grid-template-rows: 11rem 9rem; }
+  .card:last-child {
+    margin-bottom: 10rem; }
+  .card__header {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    grid-template-columns: repeat(2, 1fr); }
   .card__logo {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -35,26 +41,75 @@ body {
     transform: translateY(0.5rem) translateX(0.5rem); }
   .card__img {
     grid-row: 2 / 3;
-    grid-column: 1/-1;
+    grid-column: 1/ -1;
     justify-self: center;
     width: 13rem;
     transform: translateY(-2rem); }
-  .card__header {
+  .card__body {
+    background-color: #FFFFFF;
+    font-size: 1.1rem;
+    padding-left: .5rem;
+    padding-top: .3rem;
     display: grid;
-    grid-template-rows: 2rem 1fr;
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, min-content) 1fr; }
+    .card__body__edition, .card__body__brand {
+      line-height: 1.2rem;
+      transform: translateY(-2px); }
+    .card__body__title {
+      grid-column: 1 / -1; }
+    .card__body__edition {
+      font-size: 1rem;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3; }
+    .card__body__brand {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      font-size: .9rem; }
+    .card__body__rating {
+      grid-row: 4 / 5; }
+      .card__body__rating__icon {
+        width: 1rem;
+        height: 1rem;
+        fill: #FFB800; }
+    .card__body__price {
+      grid-row: 3 / -1;
+      grid-column: 2 / 3;
+      justify-self: center;
+      align-self: center;
+      margin-top: .5rem;
+      margin-right: 2px;
+      transform: translateY(3px);
+      display: flex; }
+      .card__body__price--main {
+        font-size: 2em; }
+      .card__body__price--currency, .card__body__price--remaining {
+        transform: translateY(-2px); }
+  .card__cta {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6; }
+    .card__cta__btn {
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFFFFF;
+      background-color: #3D0C69;
+      border: none;
+      border-radius: 6%;
+      outline: none;
+      padding: .2rem .5rem; }
   .card--lakers-shoe__header {
     background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
-  .card--lakers-shoe__body {
-    background-color: grey; }
   .card--lakers-cap__header {
     background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
-  .card--lakers-cap__body {
-    background-color: grey; }
+  .card--lakers-cap--img {
+    width: 10rem;
+    transform: translateY(1rem); }
   .card--lakers-shirt__header {
     background-image: linear-gradient(to left bottom, rgba(179, 144, 34, 0.1), rgba(61, 12, 105, 0.9)); }
-  .card--lakers-shirt__body {
-    background-color: grey; }
+  .card--lakers-shirt--img {
+    width: 10rem; }
 
 .header {
   display: flex;

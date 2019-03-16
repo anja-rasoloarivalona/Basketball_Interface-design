@@ -1,86 +1,159 @@
 .card {
-
     height: 20rem;
     width: 15rem;
     border-radius: 2%;
-    box-shadow: 0 .3rem .3rem rgba(black, .2);
+    box-shadow: $shadow;
 
     display: grid;
     grid-template-rows: 11rem 9rem;
+
+        &:last-child {
+        margin-bottom: 10rem;
+        }
     
+        &__header {        
+            display: grid;
+            grid-template-rows: 2rem 1fr;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__logo {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            width: 3rem;
+            height: 1.5rem;
+            transform: translateY(.5rem) translateX(.5rem);   
+        } 
+
+        &__img {
+        grid-row: 2 / 3;
+        grid-column: 1/ -1;
+        justify-self: center;
+        width: 13rem;
+        transform: translateY(-2rem)
+        }
 
 
+        &__body {
+            background-color: $color-white;
+            font-size: 1.1rem;
+            padding-left: .5rem;
+            padding-top: .3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, min-content) 1fr;
 
-    &__logo {
-        grid-row: 1 / 2;
+            &__edition,
+            &__brand {    
+                line-height: 1.2rem;
+                transform: translateY(-2px);
+                }
+
+            &__title {
+                grid-column: 1 / -1;
+            }
+
+
+            &__edition {
+                font-size: 1rem;
+                grid-column: 1 / -1;
+                grid-row: 2 / 3;
+                }
+
+            &__brand {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                font-size: .9rem;
+                }
+
+            &__rating {
+
+                grid-row: 4 / 5;
+
+                &__icon {
+                    width: 1rem;
+                    height: 1rem;
+                    fill: #FFB800;
+                    }
+                }
+
+            
+
+            &__price {
+                grid-row: 3 / -1;
+                grid-column: 2 / 3;
+
+                justify-self: center;
+                align-self: center;
+                margin-top: .5rem;
+                margin-right: 2px;
+                transform: translateY(3px);
+
+                display: flex;
+
+                &--main {
+                    font-size: 2em;
+                }
+
+                &--currency,
+                &--remaining {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    
+    &__cta {
         grid-column: 1 / 2;
-        width: 3rem;
-        height: 1.5rem;
+        grid-row: 5 / 6;
 
-        transform: translateY(.5rem) translateX(.5rem);
-        
-    } 
+        &__btn {
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-white;
+        background-color: $color-kobe-primary;
+        border: none;
+        border-radius: 6%;
+        outline: none;
+        padding: .2rem .5rem;
 
-    &__img {
-       grid-row: 2 / 3;
-       grid-column: 1/-1;
-       justify-self: center;
-       width: 13rem;
-       transform: translateY(-2rem)
-     
-
-    }
-
-    &__header {
-         
-        display: grid;
-        grid-template-rows: 2rem 1fr;
-        grid-template-columns: repeat(2, 1fr);
-    
+        }
     }
 
 
 
-
-    &--lakers-shoe {
-        
-       &__header {
-           background-image: linear-gradient(to left bottom,
+    &--lakers-shoe {       
+        &__header {
+            background-image: linear-gradient(to left bottom,
                 rgba($color-kobe-secondary, .10),
-                rgba($color-kobe-primary, .90),
-           );
-       }
-
-       &__body {
-           background-color: grey;
-       }
+                rgba($color-kobe-primary, .90));
+            }
     }
 
     &--lakers-cap {
-
         &__header {
             background-image: linear-gradient(to left bottom,
                  rgba($color-kobe-secondary, .10),
-                 rgba($color-kobe-primary, .90),
-            );
-        }
- 
-        &__body {
-            background-color: grey;
+                 rgba($color-kobe-primary, .90));           
+            }
+        
+        &--img {
+            width: 10rem;
+            transform: translateY(1rem);
         }
     }
 
-    
     &--lakers-shirt {
         &__header {
             background-image: linear-gradient(to left bottom,
                  rgba($color-kobe-secondary, .10),
-                 rgba($color-kobe-primary, .90),
-            );
-        }
- 
-        &__body {
-            background-color: grey;
-        }
+                 rgba($color-kobe-primary, .90));
+            }
+
+       &--img {
+           width: 10rem;
+       }
+
     }
 }

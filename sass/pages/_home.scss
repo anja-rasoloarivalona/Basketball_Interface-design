@@ -19,7 +19,21 @@
    
 }
 
+.background-text {
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+    text-transform: uppercase;
+    font-size: 20rem;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: rgba(black, .10);
+    font-weight: 800;
 
+  
+}
 
 .header {
     grid-row: 1 / 2;
@@ -34,4 +48,9 @@
 .home-news {
     grid-row: 3 / 4;
     grid-column: center-start / center-end;
+}
+
+.home-main-content {
+    grid-column : col-start 3 / full-end;
+    grid-row: 2 / 3;
 }

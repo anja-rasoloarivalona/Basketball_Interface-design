@@ -145,12 +145,10 @@ body {
   display: grid;
   grid-gap: 1rem;
   grid-template-rows: 5rem repeat(2, min-content);
-  margin: 6rem;
   height: 40rem;
   width: 40rem;
   box-shadow: 0 0.3rem 0.3rem rgba(8, 8, 8, 0.2);
-  align-content: start;
-  transform: translateX(10rem); }
+  align-self: center; }
   .home-main-content__text {
     line-height: 1.6rem;
     margin: 0.5rem;
@@ -158,6 +156,9 @@ body {
   .home-main-content__title {
     padding-top: 1rem;
     padding-left: 1rem; }
+  .home-main-content__video {
+    width: 40rem;
+    height: 22.5rem; }
 
 .home-shop {
   display: grid;
@@ -251,5 +252,5 @@ body {
   grid-column: center-start / center-end; }
 
 .home-main-content {
-  grid-column: col-start 3 / full-end;
+  grid-column: col-start 4 / col-end 6;
   grid-row: 2 / 3; }

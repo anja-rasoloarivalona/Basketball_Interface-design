@@ -4,66 +4,121 @@
     grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
+    
+   
 
 /////////////////////////////
 ///////  SIDEBAR HEADER
 
     
     &__header {
-        display: flex;
+        position: fixed;
+        display: grid;
+        grid-template-rows: 4rem;
+        grid-template-columns: 5.8rem max-content;
+        //display: flex;
+        //height: 4rem;
         background-color: rgba($color-nav, .20);
     }
 
     &__title {
         font-size: 2.3rem;
         font-family: $font-secondary;
-        flex-grow: 1;
         align-self: center;
-        transform: translateY(2px);
+        text-align: start;
+        transform: translateX(2rem);
+    
     }
 
     &__btn {
-        margin: 1.2rem;
-        margin-right: .6rem;
-        margin-bottom: .8rem;
-        display: flex;
-        flex-direction: column;
+        //background-color: black;
+        align-self: center;
+        padding: 1em;
+        margin-left: 2rem;
+        cursor: pointer;
     
 
-        &--1,
-        &--2,
-        &--3 {
-        width: 2rem;
-        height: .3rem;
-        margin: .2rem;
-        background-color:  black;
+        &__icon,
+        &__icon::before,
+        &__icon::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 3rem;
+            background-color: $color-nav;
+            border-radius: 3px;
+            transition: .5s; 
         }
+        
+        &__icon::before {
+            transform: translateY(-6px);
+        }
+
+        &__icon::after {
+            transform: translateY(3px);
+        }
+        
+        //FUNCTIONALITY OF THE BUTTON
+
+        &--active &__icon::before {
+            opacity: 0; 
+        }
+
+        &--active &__icon{
+            width: 2.5rem;
+            transform: translateY(0px) rotate(45deg);
+        }
+
+        &--active &__icon::after {
+            transform: translateY(-1.5px) rotate(-90deg);
+            width: 2.5rem;
+            }
+
+
     }
+    
 
 
 /////////////////////////////
 ///////  SIDEBAR BODY
+    &__body {
+        position: fixed;
+        width: 20rem;
+        top: 4rem;
+        background-color: black;
+        height: calc(100vh - 4rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: .5s;
 
+        &--active {
+            transform: translateX(0%);
+        }
+    }
 
     &__nav {
         flex-grow: 1;
-
         display: flex;
-        justify-content: center;
+        justify-content: center;  
     }
 
     &__list {
         margin-top: 8rem;
         width: 80%;
         list-style-type: none;
+       
 
 
+  
     }
 
     &__items {
         display: flex;
         justify-content: start;
         align-items: center;
+
 
         &:not(:last-child) {
             margin-bottom: 3rem;
@@ -81,7 +136,82 @@
         height: 2.5rem;
         margin-right: 2rem;
         margin-left: 2rem;
+        fill: white;
+    }
+
+
+////////////////////////////////
+/////// SOCIAL MEDIA
+
+   
+
+    &__social-text {
+
+        display: grid;
+        grid-template-columns: 2.5rem max-content 2.5rem;
+        grid-column-gap: .8rem;
+        align-items: center;
+        justify-content: center;
+        
+
+
+
+        font-size: 1.6rem;
+        color: black;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor; 
+        }
+
     }
 
     
+    &__social-media {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2rem;
+            margin-top: .4rem;
+            justify-items: center;         
+            
+            &__logo {
+                height: 2.5rem; 
+                width: 100%;
+
+               /* &--facebook {
+                    fill: #014BAA;
+                }
+                &--linkedin {
+                    fill: #006699;
+                }
+
+                */
+
+                &--instagram {
+                    fill: #EF5E43;
+                }
+                &--twitter {
+                    fill: #1C9CEB;
+                }
+                &--youtube {
+                    fill: #FF0000;
+                }
+            }     
+            
+        }    
+    
+        &__social-text {
+            margin: 0 .2rem;
+        }
+        &__social-media {
+            margin: 0 .3rem 5rem;
+            line-height: 3rem;
+            padding: 1rem;
+        }
+
+     
+
 }

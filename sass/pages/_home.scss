@@ -37,7 +37,7 @@
 
 .header {
     grid-row: 1 / 2;
-    grid-column: full-start / -1;
+    grid-column: 1 / -1;
 }
 
 .home-shop {
@@ -45,12 +45,18 @@
     grid-row: 2 / -1;
 }
 
-.home-news {
-    grid-row: 3 / 4;
-    grid-column: center-start / center-end;
-}
+
 
 .home-main-content {
     grid-column : col-start 4 / col-end 6;
     grid-row: 2 / 3;
+}
+
+.home-news {
+    margin-top: 20rem;
+    background-image: url("../img/court.jpg");
+    background-position: center;
+    height: 100vh;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
 }

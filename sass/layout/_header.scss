@@ -1,9 +1,70 @@
 .header {
-    
+    position: fixed;
+    width: 100%;
+    height: 4.1rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: rgba($color-nav, .20);
+
+    &__sidebar {
+        display: flex;
+
+        &__title {
+            font-size: 2.3rem;
+            font-family: $font-secondary;
+            align-self: center;
+            text-align: start;
+            transform: translateX(2rem);
+        }
+
+        &__btn {
+            //background-color: black;
+            align-self: center;
+            padding: 1em;
+            width: 4.8rem;
+            //margin-left: 2rem;
+            cursor: pointer;
+
+                &__hamburger,
+                &__hamburger::before,
+                &__hamburger::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 3rem;
+                    background-color: $color-nav;
+                    border-radius: 3px;
+                    transition: .5s; 
+                    }
+        
+                &__hamburger::before {
+                        transform: translateY(-6px);
+                    }
+
+                &__hamburger::after {
+                        transform: translateY(3px);
+                    }
+
+                    //FUNCTIONALITY OF THE BUTTON
+
+                 &--active &__hamburger::before {
+                        opacity: 0; 
+                    }
+
+                &--active &__hamburger{
+                        width: 2.5rem;
+                        transform: translateY(0px) rotate(45deg);
+                    }
+
+                &--active &__hamburger::after {
+                        transform: translateY(-1.5px) rotate(-90deg);
+                        width: 2.5rem;
+                    }
+                }
+        }
+
+
 
 
     &__profile {

@@ -1,0 +1,17 @@
+.home-news {
+
+    display: grid;
+    grid-template-columns: 20rem 1fr 20rem;
+    grid-template-rows: 10rem min-content;
+
+
+    &__score-board {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-top: 2rem;
+        
+    }
+
+    
+
+}

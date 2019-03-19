@@ -3,14 +3,14 @@
     width: 15rem;
     border-radius: 2%;
     box-shadow: $shadow;
-    z-index: 100;
+    z-index: 10; //header will have z-index 20 so it will be placed above
 
     display: grid;
     grid-template-rows: 11rem 9rem;
 
-        &:last-child {
-        margin-bottom: 10rem;
-        }
+       // &:last-child {
+        margin-bottom: 10rem; //
+        
     
         &__header {        
             display: grid;

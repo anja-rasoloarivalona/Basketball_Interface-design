@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 20; //z-index of card is 10
+
     background-color: rgba($color-nav, .20);
 
     &__sidebar {
@@ -103,5 +105,27 @@
         fill: $color-kobe-primary;
         transform: translateY(2px);
       
+    }
+
+    //FUNCTIONNALITY OF THE HEADER ON SCROLL
+
+    &--scroll {
+        background-color: black;
+        color: white;
+
+        &__btn,
+        &__btn::before,
+        &__btn::after {
+            background-color: white;
+        }
+
+
+        &__icon {
+            fill: white;
+        }
+
+        &__items {
+            color: white !important;
+        }
     }
 }

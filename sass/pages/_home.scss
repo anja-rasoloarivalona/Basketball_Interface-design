@@ -55,8 +55,20 @@
 .home-news {
     margin-top: 20rem;
     background-image: url("../img/court.jpg");
-    background-position: center;
-    height: 100vh;
+    
+    
     grid-row: 3 / 4;
     grid-column: 1 / -1;
+
+    /*
+    background-position: center;
+    height: calc(100vh - 4.1rem);
+    */
+    height: 95vh;
+    position :  relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }

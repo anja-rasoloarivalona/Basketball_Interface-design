@@ -28,7 +28,7 @@
 
 <!---START BODY OF THE SIDEBAR--->
 
-        <div class="sidebar">    
+    <div class="sidebar">    
             <div class="sidebar__body">
 
                 <!---START LIST ITEMS OF THE SIDEBAR--->
@@ -273,44 +273,9 @@
                         <div class="card__cta">
                             <button type="button" class="card__cta__btn">Buy now</button>
                         </div>
-                    </div>>
-            </div>
-            <div class="home-shop__card card card--lakers-shoe">
-                <div class="card__header card--lakers-shoe__header">
-                    <img src="img/logo--nike.png" alt="" class="card__logo card--lakers-shoe__logo">
-                    <img src="img/lakers_shoe.png" alt="" class="card__img card--lakers-shoe--img ">
-                </div>
-                <div class="card__body">
-                        <h4 class="card__body__title">Nike Sneakers</h4>
-                        <span class="card__body__edition">Kobe Bryant special edition</span>
-                        <span class="card__body__brand">by Nike</span>
-                        <div class="card__body__rating ">
-                                <svg class="card__body__rating__icon">
-                                    <use xlink:href="img/icon/sprite.svg#icon-star-full"></use>
-                                </svg>
-                                <svg class="card__body__rating__icon">
-                                    <use xlink:href="img/icon/sprite.svg#icon-star-full"></use>
-                                </svg>
-                                <svg class="card__body__rating__icon">
-                                    <use xlink:href="img/icon/sprite.svg#icon-star-full"></use>
-                                </svg>
-                                <svg class="card__body__rating__icon">
-                                    <use xlink:href="img/icon/sprite.svg#icon-star-full"></use>
-                                </svg>
-                                <svg class="card__body__rating__icon">
-                                    <use xlink:href="img/icon/sprite.svg#icon-star-full"></use>
-                                </svg>
-                        </div>
-                        <div class="card__body__price">
-                            <span class="card__body__price--currency">CDN$</span>
-                            <span class="card__body__price--main">85</span>
-                            <span class="card__body__price--remaining">99</span>                 
-                        </div>
-                        <div class="card__cta">
-                            <button type="button" class="card__cta__btn">Buy now</button>
-                        </div>
                     </div>
-            </div>                        
+            </div>
+                                  
 
     </section>
 
@@ -328,10 +293,62 @@
     </section>
 
     <section class="home-news">
-            <h1 class="home-news__title">Kobe Bryant drops an amamzing 81 points, high-career record</h1>
-            <p class="home-news__content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, odit quis. Alias, dignissimos eum rem nihil neque voluptatibus, quae sapiente quod consequatur nostrum quas deserunt placeat! Cupiditate vitae sint magni? Cumque laborum architecto temporibus? Consequatur cumque vitae praesentium ratione aspernatur saepe reprehenderit reiciendis, nesciunt maxime debitis numquam esse rerum! Ipsum nobis odit aperiam id animi quibusdam nesciunt molestias dolor esse. Minus laboriosam alias sit nihil quos dolor explicabo quod ab neque vero nisi laudantium facere recusandae placeat, expedita reprehenderit in fugiat veritatis voluptatem dolore eaque? Inventore consequatur nostrum reiciendis consequuntur et, quisquam odit nemo unde doloremque, doloribus adipisci porro nesciunt!
-            </p>
+
+        <!---We have 4 parts for each team in the score-board : : TOTAL = 9 parts
+                    - Big logo
+                    - Name of the team
+                    - Small logo
+                    - Total points
+            And in the middle, we have the details
+        
+            So, in the HTML below, the section of the score-board are build 2 by 2 because it makes easier to maintain and update
+            
+            But for that working, WE HAVE TO USE to power of ORDER with flexbox -->
+
+        <div class="home-news__score-board score-board">
+
+            <!---Start logo for the both temans-->
+                <!--First team-->
+                <img src="../img/rockets-logo.png" alt="logo" 
+                class="score-board__logo score-board__logo--1">
+                <img src="../img/rockets-logo.png" alt="logo" 
+                class="score-board__logo--small score-board__logo--1--small">
+                <!--second team-->
+                <img src="../img/sacramento-logo.png" alt="logo" class="score-board__logo score-board__logo--2">
+                <img src="../img/sacramento-logo.png" alt="logo" class="score-board__logo--small score-board__logo--2--small">
+            <!---End logo for the both teams-->
+            
+            <!---Start team name-->
+                <!--First team-->
+                <div class="score-board__team score-board__team--1">
+                    <h4 class="score-board__team-name">
+                        Houston Rockets
+                    </h4>
+                    <span class="score-board__record">
+                        32-22, 13-14 Away
+                    </span>
+                </div>
+                <!--second team-->
+                <div class="score-board__team score-board__team--2">
+                    <h4 class="score-board__team-name">
+                        Sacramento Kings
+                    </h4>
+                    <span class="score-board__record">
+                        28-26, 17-11 Home
+                    </span>
+                </div>
+            <!---End team name-->
+
+            <!--start SCORE-->
+            <span class="score-board__team--1__score">127</span>          
+            <span class="score-board__team--2__score">101</span>
+            <!--end SCORE-->
+
+            <div class="score-board__details">
+                Details
+            </div>
+
+        </div>
     </section>
 
 

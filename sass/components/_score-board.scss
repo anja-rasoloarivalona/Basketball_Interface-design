@@ -1,0 +1,71 @@
+.score-board {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    &__logo {
+        height: 8rem;
+        object-fit: cover;
+
+        &--1 {
+            order: 1;
+
+            &--small {
+                order: 3;
+            }
+        }
+
+        &--2 {
+            order: 9;
+
+            &--small {
+                order: 7;
+            }
+        }
+
+        &--small {
+            height: 4rem;
+            object-fit: cover;                
+        }
+
+    }   
+
+    &__team {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &--1 {
+            order: 2;
+
+            &__score {
+                order: 5;
+            }
+        }
+
+        &--2 {
+            order: 8;
+
+            &__score {
+                order: 6;
+            } 
+        }           
+    }
+
+    &__record {
+        font-size: 1rem;
+        color: grey;
+        }
+
+    &__details {
+        order: 5;
+    }
+
+    
+
+
+}

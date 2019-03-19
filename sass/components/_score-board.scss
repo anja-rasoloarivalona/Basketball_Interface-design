@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 1%;
 
     
     &__logo {
@@ -41,17 +42,27 @@
 
         &--1 {
             order: 2;
+            transform: translateX(1.8rem);
 
+            & span {
+                align-self: flex-end;
+            }
             &__score {
                 order: 5;
+                font-size: 3rem;
+                font-weight: 500;
+                color: black;
             }
         }
 
         &--2 {
             order: 8;
-
+            transform: translateX(-1.8rem);
             &__score {
                 order: 6;
+                font-size: 3rem;
+                font-weight: 700;
+                color: grey;
             } 
         }           
     }
@@ -63,6 +74,9 @@
 
     &__details {
         order: 5;
+        width: 17rem;
+        height: 100%;
+        //background-color: orangered;
     }
 
     

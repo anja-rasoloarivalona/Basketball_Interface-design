@@ -20,6 +20,29 @@ body {
   color: #1d2129;
   line-height: 1.93rem; }
 
+.board {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .board hr {
+    width: 90%;
+    height: 1px;
+    background-color: black; }
+  .board__quarter, .board__team--1, .board__team--2 {
+    display: flex; }
+    .board__quarter div:last-child, .board__team--1 div:last-child, .board__team--2 div:last-child {
+      transform: translateX(1rem); }
+    .board__quarter > *, .board__team--1 > *, .board__team--2 > * {
+      margin: 0 .2rem; }
+  .board__quarter > * {
+    font-size: 1rem;
+    margin: 0 .5rem;
+    transform: translateX(4px); }
+  .board__team--1:not(:first-child), .board__team--2:not(:first-child) {
+    font-size: 1rem; }
+  .board__team-name {
+    transform: translateX(-1.5rem); }
+
 .card {
   height: 20rem;
   width: 15rem;
@@ -116,7 +139,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-radius: 1%; }
   .score-board__logo {
     height: 8rem;
     object-fit: cover; }
@@ -136,18 +160,30 @@ body {
     flex-direction: column;
     justify-content: center; }
     .score-board__team--1 {
-      order: 2; }
+      order: 2;
+      transform: translateX(1.8rem); }
+      .score-board__team--1 span {
+        align-self: flex-end; }
       .score-board__team--1__score {
-        order: 5; }
+        order: 5;
+        font-size: 3rem;
+        font-weight: 500;
+        color: black; }
     .score-board__team--2 {
-      order: 8; }
+      order: 8;
+      transform: translateX(-1.8rem); }
       .score-board__team--2__score {
-        order: 6; }
+        order: 6;
+        font-size: 3rem;
+        font-weight: 700;
+        color: grey; }
   .score-board__record {
     font-size: 1rem;
     color: grey; }
   .score-board__details {
-    order: 5; }
+    order: 5;
+    width: 17rem;
+    height: 100%; }
 
 .header {
   position: fixed;

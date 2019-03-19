@@ -1,0 +1,49 @@
+.board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & hr {
+        width: 90%;
+        height: 1px;
+        background-color: black;
+    }
+
+
+    &__quarter,
+    &__team--1,
+    &__team--2 { 
+            display: flex;
+                & div:last-child {
+                    transform: translateX(1rem);
+                }
+                & > * {
+                    margin: 0 .2rem;
+                }
+        }
+    
+    &__quarter > * {
+            font-size: 1rem;
+            margin: 0 .5rem;
+            transform: translateX(4px);
+    }
+
+    
+   
+
+    &__team--1,
+    &__team--2 {
+        &:not(:first-child) {
+            font-size: 1rem;
+        }    
+    }
+
+    
+
+    &__team-name {
+        transform: translateX(-1.5rem);
+    }
+
+    
+}
+        

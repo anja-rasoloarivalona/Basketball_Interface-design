@@ -8,8 +8,7 @@
     display: grid;
     grid-template-rows: 11rem 9rem;
 
-       // &:last-child {
-        margin-bottom: 10rem; //
+
         
     
         &__header {        
@@ -157,4 +156,30 @@
        }
 
     }
+
+    &--rockets-shoe { 
+        grid-row: 6 / 7;
+
+        &__header {
+            background-image: linear-gradient(to left bottom,
+                 rgba(red, .10),
+                 rgba(black, .90));
+            }
+
+
+    }
+
+    &--rockets-shirt {
+        grid-row: 7 / 8;
+        &__header {
+            background-image: linear-gradient(to left bottom,
+                 rgba($color-kobe-secondary, .10),
+                 rgba($color-kobe-primary, .90));
+            }
+
+       &--img {
+           width: 10rem;
+       }
+    }
+
 }

@@ -1,7 +1,9 @@
 .board {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 4rem repeat(4, 1fr) 4rem;
+    grid-template-rows: repeat(4, 1fr);
+    
+
 
     & hr {
         width: 90%;
@@ -9,41 +11,75 @@
         background-color: black;
     }
 
+    &__header {
+        grid-column: 2 / 6;
+        grid-row: 1 / 2;
+        flex-grow: 1;
+        justify-self: center;
+    }
+
+    &__quarter {
+        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+    }
+
+    &__team--1 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        border-top: 1px solid black;
+    }
+
+    &__team--2 {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
 
     &__quarter,
     &__team--1,
-    &__team--2 { 
-            display: flex;
-                & div:last-child {
-                    transform: translateX(1rem);
-                }
-                & > * {
-                    margin: 0 .2rem;
-                }
-        }
-    
-    &__quarter > * {
-            font-size: 1rem;
-            margin: 0 .5rem;
-            transform: translateX(4px);
+    &__team--2 {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-around;
     }
-
-    
-   
-
+ 
     &__team--1,
     &__team--2 {
-        &:not(:first-child) {
+        & div:not(:first-child):not(:last-child) {
             font-size: 1rem;
-        }    
+            color: grey;
+            margin: 0 .1rem;
+        }
     }
 
-    
+    &__quarter {
 
+        transform: translateX(-6px);
+        margin: 0 -.1rem;
+        
+        & div:not(:last-child) {
+            font-size: 1rem;
+            color: grey;
+        }     
+    }
+    
     &__team-name {
-        transform: translateX(-1.5rem);
+        font-size: 1.1rem;
     }
 
-    
+    &__quarter,
+    &__team--1,
+    &__team--2 {
+        & div:last-child {
+            font-size: 1.2rem; 
+            font-weight: 600;
+        }
+    }
+
 }
+
+
+    
+ 
+    
+
         

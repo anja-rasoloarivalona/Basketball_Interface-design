@@ -1,8 +1,7 @@
 .home-news {
-
     display: grid;
     grid-template-columns: 20rem 1fr 20rem;
-    grid-template-rows: 10rem min-content;
+    grid-template-rows: 10rem 1fr;
 
 
     &__score-board {
@@ -13,5 +12,14 @@
     }
 
     
-
+    &__video {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        
+        width: 40rem;
+        height: 22.5rem;
+        align-self: center;
+    }
 }
+
+

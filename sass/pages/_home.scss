@@ -1,6 +1,6 @@
 .container {  
     display: grid;
-    grid-template-rows: 4.1rem calc(100vh - 4.1rem) min-content;
+    grid-template-rows: 4.1rem calc(100vh - 4.1rem) 100vh 100vh;
     grid-template-columns: 
     [right-side-start] 20rem [right-side-end 
 
@@ -53,22 +53,32 @@
 }
 
 .home-news {
-    margin-top: 20rem;
-    background-image: url("../img/court.jpg");
+    margin-top: 15rem;
+    background-image: url("../img/bg.jpg");
+
     
     
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-
-    /*
-    background-position: center;
-    height: calc(100vh - 4.1rem);
-    */
     height: 95vh;
     position :  relative;
-    background-position: center;
+    background-position: 0 1rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     
 }
+
+
+.home-calendar {
+   
+
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end;
+
+    
+  
+
+}
+
+

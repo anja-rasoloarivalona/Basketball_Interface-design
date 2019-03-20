@@ -1,9 +1,8 @@
 .container {  
     display: grid;
-    grid-template-rows: 4.1rem calc(100vh - 4.1rem) 100vh 100vh;
+    grid-template-rows: 4.1rem calc(100vh - 4.1rem) 100vh min-content;
     grid-template-columns: 
     [right-side-start] 20rem [right-side-end 
-
         full-start] minmax(6rem,1fr) 
 
         [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 
@@ -72,9 +71,18 @@
 
 .home-calendar {
    
-
     grid-row: 4 / 5;
     grid-column: center-start / center-end;
+    background-image: radial-gradient(circle closest-side,
+        rgba(transparent, .9),
+        rgba(black, .1)),
+        url('../img/court.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+    
 
     
   

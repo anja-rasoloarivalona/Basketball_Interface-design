@@ -97,35 +97,25 @@
         
     }
 
-
-    &__icon {
-        height: 2rem;
-        width: 2rem;
-        margin: .5rem 1.4rem;
-        fill: $color-kobe-primary;
-        transform: translateY(2px);
-      
+    &__btn {
+        margin-right: 2rem;
     }
+
 
     //FUNCTIONNALITY OF THE HEADER ON SCROLL
 
     &--scroll {
-        background-color: black;
-        color: white;
+        background-color: $color-nav;
+        color: $color-white;
 
         &__btn,
         &__btn::before,
         &__btn::after {
-            background-color: white;
-        }
-
-
-        &__icon {
-            fill: white;
+            background-color: $color-white;
         }
 
         &__items {
-            color: white !important;
+            color: $color-white !important;
         }
     }
 }

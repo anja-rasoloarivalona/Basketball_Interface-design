@@ -63,6 +63,22 @@ body {
     font-size: 1.2rem;
     font-weight: 600; }
 
+.btn {
+  border: none;
+  outline: none;
+  width: 8rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6%;
+  font-size: 1.3rem;
+  padding: .5rem 1rem; }
+  .btn--login {
+    background-color: #3D0C69;
+    color: #FFFFFF; }
+  .btn--signup {
+    background-color: #FFFFFF;
+    color: #3D0C69; }
+
 .card {
   height: 20rem;
   width: 15rem;
@@ -273,21 +289,15 @@ body {
     color: #3D0C69;
     width: 4rem;
     margin: .6rem 1.6rem; }
-  .header__icon {
-    height: 2rem;
-    width: 2rem;
-    margin: .5rem 1.4rem;
-    fill: #3D0C69;
-    transform: translateY(2px); }
+  .header__btn {
+    margin-right: 2rem; }
   .header--scroll {
-    background-color: black;
-    color: white; }
+    background-color: #1d2733;
+    color: #FFFFFF; }
     .header--scroll__btn, .header--scroll__btn::before, .header--scroll__btn::after {
-      background-color: white; }
-    .header--scroll__icon {
-      fill: white; }
+      background-color: #FFFFFF; }
     .header--scroll__items {
-      color: white !important; }
+      color: #FFFFFF !important; }
 
 .home-calendar {
   margin-top: 17rem;

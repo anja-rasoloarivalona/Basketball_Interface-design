@@ -65,13 +65,18 @@ body {
 
 .btn {
   border: none;
-  outline: none;
   width: 8rem;
   text-align: center;
   text-decoration: none;
   border-radius: 6%;
   font-size: 1.3rem;
-  padding: .5rem 1rem; }
+  padding: .5rem 1rem;
+  cursor: pointer; }
+  .btn:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 0.3rem 0.3rem rgba(8, 8, 8, 0.2); }
+  .btn:focus {
+    outline: none; }
   .btn--login {
     background-color: #3D0C69;
     color: #FFFFFF; }
@@ -300,8 +305,7 @@ body {
       color: #FFFFFF !important; }
 
 .home-calendar {
-  margin-top: 17rem;
-  margin-bottom: 10rem;
+  margin: 8rem 0;
   max-width: 70rem;
   display: grid;
   grid-template-columns: repeat(2, min-content);
@@ -345,24 +349,47 @@ body {
     align-self: center; }
 
 .home-main-content {
-  background-color: #FFFFFF;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-rows: 5rem repeat(2, min-content);
-  height: 40rem;
-  width: 40rem;
-  box-shadow: 0 0.3rem 0.3rem rgba(8, 8, 8, 0.2);
-  align-self: center; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
   .home-main-content__text {
-    line-height: 1.6rem;
-    margin: 0.5rem;
-    text-indent: 1rem; }
-  .home-main-content__title {
-    padding-top: 1rem;
-    padding-left: 1rem; }
-  .home-main-content__video {
-    width: 40rem;
-    height: 22.5rem; }
+    text-transform: uppercase;
+    font-size: 6rem;
+    margin: 0 10rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400; }
+  .home-main-content__features {
+    display: flex; }
+  .home-main-content__btn {
+    width: 13rem;
+    height: 13rem;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #3D0C69; }
+    .home-main-content__btn__link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .home-main-content__btn__link span {
+        color: #3D0C69;
+        padding-top: .5srem; }
+    .home-main-content__btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.3rem 0.3rem rgba(8, 8, 8, 0.2); }
+  .home-main-content__icon {
+    height: 6rem;
+    object-fit: cover;
+    fill: #3D0C69; }
 
 .home-news {
   display: grid;
@@ -398,41 +425,54 @@ body {
     position: fixed;
     width: 20rem;
     top: 4rem;
-    background-color: black;
     height: calc(100vh - 4rem);
     display: flex;
     flex-direction: column;
+    color: #3D0C69;
     justify-content: space-around;
     transform: translateX(-100%);
-    transition: .5s; }
+    transition: .5s;
+    background-color: #FFFFFF; }
     .sidebar__body--active {
       transform: translateX(0%); }
   .sidebar__nav {
-    flex-grow: 1;
     display: flex;
     justify-content: center; }
   .sidebar__list {
     margin-top: 8rem;
-    width: 80%;
+    width: 100%;
     list-style-type: none; }
   .sidebar__items {
     display: flex;
-    justify-content: start;
-    align-items: center; }
+    position: relative; }
     .sidebar__items:not(:last-child) {
-      margin-bottom: 3rem; }
+      margin-bottom: 1rem; }
+    .sidebar__items::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-color: rgba(255, 69, 0, 0.1);
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .sidebar__items:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
   .sidebar__link {
     color: #3D0C69;
     text-decoration: none;
-    transform: translateY(2px); }
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .sidebar__icon {
     width: 2.5rem;
     height: 2.5rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    fill: white; }
+    margin: 0 2rem;
+    fill: currentColor; }
   .sidebar__social-text {
-    color: white;
     display: grid;
     grid-template-columns: 2.5rem max-content 2.5rem;
     grid-column-gap: .8rem;
@@ -481,24 +521,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 4.1rem calc(100vh - 4.1rem) 100vh min-content;
-  grid-template-columns: [right-side-start] 20rem [right-side-end full-start] minmax(6rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end left-side-start] 20rem [left-side-end];
-  background-image: url("../img/bg--kobe.png");
-  background-repeat: no-repeat;
-  background-position-x: 8rem;
-  background-size: 40%; }
-
-.background-text {
-  grid-column: full-start / full-end;
-  grid-row: 2 / 3;
-  text-transform: uppercase;
-  font-size: 20rem;
-  font-family: 'Work Sans', sans-serif;
-  line-height: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: rgba(0, 0, 0, 0.1);
-  font-weight: 800; }
+  grid-template-columns: [right-side-start] 20rem [right-side-end full-start] minmax(6rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end left-side-start] 20rem [left-side-end]; }
 
 .header {
   grid-row: 1 / 2;
@@ -509,13 +532,16 @@ body {
   grid-row: 2 / -1; }
 
 .home-main-content {
-  grid-column: col-start 4 / col-end 6;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column: right-side-start / left-side-end;
   grid-row: 2 / 3; }
 
 .home-news {
-  margin-top: 15rem;
-  background-image: url("../img/bg.jpg");
-  grid-row: 3 / 4;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/test.jpg");
+  grid-row: 4 / 5;
   grid-column: 1 / -1;
   height: 95vh;
   position: relative;
@@ -525,7 +551,7 @@ body {
   background-attachment: fixed; }
 
 .home-calendar {
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
   grid-column: center-start / center-end;
   background-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("../img/court.jpg");
   background-position: center;

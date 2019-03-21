@@ -16,7 +16,7 @@
 
 <!---BIG TEXT IN THE BACKGROUND--->
 
-        <div class="background-text">
+     <!--   <div class="background-text">
             <div class="background-text__one">
                 Black
             </div>
@@ -24,6 +24,8 @@
                 Mamba
             </div>
         </div>
+    -->
+
 <!---END BIG TEXT IN THE BACKGROUND--->
 
 <!---START BODY OF THE SIDEBAR--->
@@ -34,36 +36,38 @@
                 <!---START LIST ITEMS OF THE SIDEBAR--->
                     <nav class="sidebar__nav">
                         <ul class="sidebar__list">
-                                <li class="sidebar__items">
-                                    <svg class="sidebar__icon">
-                                        <use xlink:href="img/icon/sprite.svg#icon-home3"></use>
-                                    </svg>
-                                    <a href="#" class="sidebar__link">Home</a>
+                                <li class="sidebar__items">                                   
+                                    <a href="#" class="sidebar__link">
+                                        <svg class="sidebar__icon">
+                                            <use xlink:href="img/icon/sprite.svg#icon-home3"></use>
+                                        </svg>
+                                        <span>Home</span>
+                                    </a>
                                 </li>
                                 <li class="sidebar__items">
-                                    <svg class="sidebar__icon">
-                                        <use xlink:href="img/icon/sprite.svg#icon-cart"></use>
-                                    </svg>
-                                    <a href="#" class="sidebar__link">Shop</a>
+                                    <a href="#" class="sidebar__link">
+                                        <svg class="sidebar__icon">
+                                            <use xlink:href="img/icon/sprite.svg#icon-briefcase"></use>
+                                        </svg>
+                                        <span>Portfolio</span>
+                                    </a>
                                 </li>
-                                <li class="sidebar__items">
-                                    <svg class="sidebar__icon">
-                                        <use xlink:href="img/icon/sprite.svg#icon-dribbble1"></use>
-                                    </svg>
-                                    <a href="#" class="sidebar__link">News</a>
+                                <li class="sidebar__items"> 
+                                    <a href="#" class="sidebar__link">
+                                        <svg class="sidebar__icon">
+                                            <use xlink:href="img/icon/sprite.svg#icon-user"></use>
+                                        </svg>
+                                        <span>CV</span>
+                                    </a>  
                                 </li>
-                                <li class="sidebar__items">
-                                    <svg class="sidebar__icon">
-                                        <use xlink:href="img/icon/sprite.svg#icon-bubbles"></use>
-                                    </svg>
-                                    <a href="#" class="sidebar__link">Chat</a>
-                                </li>
-                                <li class="sidebar__items">
-                                    <svg class="sidebar__icon">
-                                        <use xlink:href="img/icon/sprite.svg#icon-calendar"></use>
-                                    </svg>
-                                    <a href="#" class="sidebar__link">Calendar</a>
-                                </li>      
+                                <li class="sidebar__items"> 
+                                    <a href="#" class="sidebar__link">
+                                        <svg class="sidebar__icon">
+                                            <use xlink:href="img/icon/sprite.svg#icon-github"></use>
+                                        </svg>
+                                        <span>Github</span>
+                                    </a>
+                                </li>                      
                         </ul>
                 </nav>
                 <!---END LIST ITEMS OF THE SIDEBAR--->
@@ -361,6 +365,7 @@
 
 
     <section class="home-main-content">
+        <!--
         <h1 class="home-main-content__title">Kobe Bryant drops 81 points on Raptors <br> January 22, 2006</h1>
         <p class="home-main-content__text">
             LOS ANGELES - Kobe Bryant, often unstoppable, played at a higher level than even he imagined possible.          
@@ -368,7 +373,39 @@
             Sunday night -- the second-highest total in NBA history -- in a 122-104 victory over the Toronto Raptors. Only Wilt Chamberlain's storied 100-point game nearly 44 year ago ranks higher.        
         </p> 
         <iframe class="home-main-content__video" src="https://www.youtube.com/embed/t45OXWk1m2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
+        -->
+        <h1 class="home-main-content__text">Now you can</h1>
+        <h1 class="home-main-content__text">become a legend</h1>
+
+        <div class="home-main-content__features">
+
+            <div class="home-main-content__btn btn--shop">
+                <a href="#" class="home-main-content__btn__link">
+                    <svg class="home-main-content__icon btn--shop__icon">
+                        <use xlink:href="img/icon/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span>Shop</span>
+                </a>
+            </div>
+            <div class="home-main-content__btn btn--results">
+                <a href="#" class="home-main-content__btn__link">
+                    <svg class="home-main-content__icon btn--results__icon">
+                        <use xlink:href="img/icon/sprite.svg#icon-dribbble"></use>
+                    </svg>
+                    <span>Results</span>
+                </a>
+            </div>
+            <div class="home-main-content__btn btn--calendar">
+                <a href="#" class="home-main-content__btn__link">
+                    <svg class="home-main-content__icon btn--calendar__icon">
+                        <use xlink:href="img/icon/sprite.svg#icon-calendar"></use>
+                    </svg>
+                    <span>Schedule</span>
+                </a>
+            </div>
+
+        </div>
+
     </section>
 
     <section class="home-news">

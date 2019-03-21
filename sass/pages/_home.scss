@@ -10,29 +10,10 @@
         minmax(6rem,1fr) [full-end
 
     left-side-start] 20rem [left-side-end];
-
-    background-image: url("../img/bg--kobe.png");
-    background-repeat: no-repeat;
-    background-position-x: 8rem;
-    background-size: 40%;
-   
-}
-
-.background-text {
-    grid-column: full-start / full-end;
-    grid-row: 2 / 3;
-    text-transform: uppercase;
-    font-size: 20rem;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: rgba(black, .10);
-    font-weight: 800;
-
   
 }
+
+
 
 .header {
     grid-row: 1 / 2;
@@ -47,17 +28,25 @@
 
 
 .home-main-content {
-    grid-column : col-start 4 / col-end 6;
+    background-image: radial-gradient(circle,
+        rgba(transparent, .5),
+        rgba(black, .8) ),
+        url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column : right-side-start / left-side-end;
     grid-row: 2 / 3;
 }
 
 .home-news {
-    margin-top: 15rem;
-    background-image: url("../img/bg.jpg");
-
+    //margin-top: 15rem;
+    background-image: radial-gradient(circle,
+    rgba(transparent, .5),
+    rgba(black, .8) ),
+    url('../img/test.jpg'); 
     
-    
-    grid-row: 3 / 4;
+    grid-row: 4 / 5; 
     grid-column: 1 / -1;
     height: 95vh;
     position :  relative;
@@ -71,7 +60,7 @@
 
 .home-calendar {
    
-    grid-row: 4 / 5;
+    grid-row:  3 / 4;
     grid-column: center-start / center-end;
     background-image: radial-gradient(circle closest-side,
         rgba(transparent, .9),
@@ -80,12 +69,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    
-    
-
-    
-  
 
 }
 

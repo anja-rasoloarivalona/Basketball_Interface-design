@@ -293,7 +293,8 @@ body {
   .header__items {
     color: #3D0C69;
     width: 4rem;
-    margin: .6rem 1.6rem; }
+    margin: .6rem 1.6rem;
+    text-decoration: none; }
   .header__btn {
     margin-right: 2rem; }
   .header--scroll {
@@ -407,13 +408,24 @@ body {
     align-self: center; }
 
 .home-shop {
+  z-index: 1000;
   display: grid;
   grid-template-rows: 6rem repeat(auto-fill, 20rem);
   grid-auto-rows: repeat(auto-fill, 20rem);
   grid-gap: 1rem;
-  justify-content: center; }
+  justify-content: center;
+  transform: translateX(100%);
+  transition: .5s; }
+  .home-shop--active {
+    transform: translateX(0%); }
   .home-shop__header {
-    align-self: center; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .home-shop__header > * {
+      font-size: 2rem;
+      color: #FFFFFF; }
 
 .sidebar {
   grid-row: 2 / 3;

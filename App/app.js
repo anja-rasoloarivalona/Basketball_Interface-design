@@ -5,9 +5,17 @@ $(document).ready(function(){
 
             $(".sidebar__body").toggleClass("sidebar__body--active");
             $(this).toggleClass("header__sidebar__btn--active");
-
-
         });
+
+
+        $(".btn--shop").add(".header__items--shop").click(function() {
+            $(".home-shop").toggleClass("home-shop--active");
+        });
+
+        
+
+
+
 
         $(window).scroll(function() {
             if($(document).scrollTop() > 10) {

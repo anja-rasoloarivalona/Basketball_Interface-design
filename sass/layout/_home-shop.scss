@@ -1,17 +1,30 @@
 .home-shop {
     
+    z-index: 1000;
     display: grid;
     grid-template-rows: 6rem repeat( auto-fill, 20rem );
     grid-auto-rows:  repeat( auto-fill, 20rem);
     grid-gap: 1rem;
     justify-content: center;
-    
+    transform: translateX(100%);
+    transition: .5s;
+
+    &--active {
+        transform: translateX(0%);
+    }
 
 
     
-
     &__header {
-        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            font-size: 2rem;
+            color: $color-white;
+        }
 
     }
 }

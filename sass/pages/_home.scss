@@ -10,6 +10,16 @@
         minmax(6rem,1fr) [full-end
 
     left-side-start] 20rem [left-side-end];
+
+    overflow: hidden;
+
+    scroll-snap-type: y proximity;
+    
+    overflow-y: scroll;
+
+    scroll-padding-top: 4.1rem;
+
+    
   
 }
 
@@ -37,6 +47,8 @@
     background-position: center;
     grid-column : right-side-start / left-side-end;
     grid-row: 2 / 3;
+
+    scroll-snap-align: start;
 }
 
 .home-news {
@@ -54,6 +66,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    scroll-snap-align: start;
     
 }
 
@@ -69,6 +83,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    //height: 95vh;
+ 
+    scroll-snap-align: center;
+    
 
 }
 

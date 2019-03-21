@@ -533,7 +533,11 @@ body {
 .container {
   display: grid;
   grid-template-rows: 4.1rem calc(100vh - 4.1rem) 100vh min-content;
-  grid-template-columns: [right-side-start] 20rem [right-side-end full-start] minmax(6rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end left-side-start] 20rem [left-side-end]; }
+  grid-template-columns: [right-side-start] 20rem [right-side-end full-start] minmax(6rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end left-side-start] 20rem [left-side-end];
+  overflow: hidden;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-padding-top: 4.1rem; }
 
 .header {
   grid-row: 1 / 2;
@@ -549,7 +553,8 @@ body {
   background-size: cover;
   background-position: center;
   grid-column: right-side-start / left-side-end;
-  grid-row: 2 / 3; }
+  grid-row: 2 / 3;
+  scroll-snap-align: start; }
 
 .home-news {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/test.jpg");
@@ -560,7 +565,8 @@ body {
   background-position: 0 1rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  scroll-snap-align: start; }
 
 .home-calendar {
   grid-row: 3 / 4;
@@ -568,4 +574,5 @@ body {
   background-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("../img/court.jpg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  scroll-snap-align: center; }

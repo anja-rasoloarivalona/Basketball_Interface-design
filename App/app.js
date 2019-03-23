@@ -29,6 +29,14 @@ $(document).ready(function(){
                 $('.header__items').removeClass('header--scroll__items');
             }
         });
+
+        
 });
+
+
+
+    
+
+
 
 
